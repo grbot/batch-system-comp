@@ -1,0 +1,14 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=01:00:00
+#PBS -N ech_count
+#PBS -d .
+#PBS -M gerrit.botha@uct.ac.za
+#PBS -m abe
+#PBS -q UCTlong
+
+##### Running commands
+echo "Date is ";date
+echo "hostname is ";hostname
+exe="echo_count.sh count.txt 100"
+$exe
